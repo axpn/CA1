@@ -1,4 +1,5 @@
-import java.util.ArrayList;
+package models;
+
 import java.util.List;
 import java.util.LinkedList;
 public class Jewellery {
