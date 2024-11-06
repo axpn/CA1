@@ -1,3 +1,5 @@
+package models;
+
 public class Containment {
     private String material; // 材料名称（例如金、白金、钻石、祖母绿、银等）
     private String description; // 描述（例如宝石的切割/形状/颜色的自由文本）
