@@ -1,3 +1,7 @@
+package utils;
+
+import utils.LinkedList;
+
 public class HashTable<E> {
     private LinkedList<E>[] hashTable;
     private int size;

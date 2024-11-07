@@ -1,3 +1,5 @@
+package utils;
+
 public class LinkedList<E> {
     private class Node {
         E data;

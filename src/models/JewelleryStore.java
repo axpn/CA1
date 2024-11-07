@@ -1,28 +1,26 @@
 package models;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import java.util.Hashtable;
 public class JewelleryStore {
-    private List<DisplayCase> cases;
 
-    public JewelleryStore() {
-        this.cases = new ArrayList<>();
-    }
-
-    // 添加展示柜
-    public void addDisplayCabinet(DisplayCase cabinet) {
-        cases.add(cabinet);
-    }
-
-    // 获取所有展示柜
-    public List<DisplayCase> getCabinets() {
-        return cases;
+    //展示所有库存
+    public void showInventory() {
+        for (int i = 0; i < cases.size(); i++) {
+            DisplayCase displayCase = cases.get(i);
+            System.out.println("Display Case " + (i + 1) + ":");
+            for (int j = 0; j < displayCase.getDisplayTray().size(); j++) {
+                Tray tray = displayCase.getTrays().get(j);
+                System.out.println("\tTray " + (j + 1) + ":");
+                for (Jewellery jewellery : DisplayTray.getJewellery()) {
+                    System.out.println("\t\t" + jewelryItem);
+                }
+            }
+        }
     }
 
     // 清空所有数据
     public void clearStore() {
-        cases.clear();
+
     }
 
     // 保存和加载系统数据
