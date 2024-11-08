@@ -1,8 +1,4 @@
-package JavaFX.Controller;
-
-import models.DisplayCase;
-import models.DisplayTray;
-import models.Jewellery;
+package models;
 
 public class JewelleryStore {
 
