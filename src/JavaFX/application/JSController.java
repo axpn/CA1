@@ -1,4 +1,4 @@
-package JavaFX.Controller;
+package JavaFX.application;
 
 public class JSController {
 }
