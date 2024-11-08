@@ -1,4 +1,3 @@
-package models;
 package Controller;
 
 import models.DisplayCase;
