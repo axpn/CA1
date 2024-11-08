@@ -1,6 +1,10 @@
 package models;
+package Controller;
 
-import java.util.Hashtable;
+import models.DisplayCase;
+import models.DisplayTray;
+import models.Jewellery;
+
 public class JewelleryStore {
 
     //展示所有库存
