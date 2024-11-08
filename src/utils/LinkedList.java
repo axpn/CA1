@@ -1,31 +1,22 @@
 package utils;
-
+import java.util.*;
 public class LinkedList<E> {
 
-    private class Node<E> {
-        E data;
-        Node<E> next;
-        Node<E> prev;
 
-        public Node(E data) {
-
-            this.data = data;
-        }
-    }
 
     // Fields for head, tail, and size
-    private Node<E> head;
-    private Node<E> tail;
-    private int size;
+     Node<E> head;
+     Node<E> tail;
+     int size;
 
     // Constructor
-    public LinkedList() {
+    public  LinkedList() {
         this.head = null;
         this.tail = null;
         this.size = 0;
     }
 
-    public void addNode(E data) {
+    public  void addNode(E data) {
         Node<E> newNode = new Node<>(data);
         if (tail == null) {
             head = newNode;
@@ -52,7 +43,7 @@ public class LinkedList<E> {
         }
     }
 
-    public Node<E> findNode(E data) {
+    public  Node<E> findNode(E data) {
         Node<E> current = head;
         while (current != null) {
             if (current.data == data) {
@@ -75,10 +66,24 @@ public class LinkedList<E> {
         }
     }
 
+    public void removeLinkedList(LinkedList<E> list) {
+        if (list == null) {
+            return;
+        }
+        if (list.head.prev == null) {
+            head=list.tail.next ;
+        } else {
+            list.head.prev.next = list.tail.next;
+        }
+    }
+
     public void loop() {
         for (Node<E> p = head; p != null; p = p.next) {
             System.out.println(p.data);
         }
     }
 
+
+
+    
 }
