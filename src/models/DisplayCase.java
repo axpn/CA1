@@ -4,13 +4,13 @@ import java.util.Hashtable;
 
 
 public class DisplayCase {
-    private String id; // 唯一标识符
+    private String caseId; // 唯一标识符
     private String type; // 类型：壁挂式或独立式
     private String lighting; // 是否有照明
     private Hashtable<String,DisplayCase> cases;
 
-    public DisplayCase(String id, String type, String lighting) {
-        this.id = id;
+    public DisplayCase(String caseId, String type, String lighting) {
+        this.caseId = caseId;
         this.type = type;
         this.lighting = lighting;
         this.cases = new Hashtable<>();
@@ -28,6 +28,6 @@ public class DisplayCase {
 
     // 获取展示柜的 ID
     public String getId() {
-        return id;
+        return caseId;
     }
 }
