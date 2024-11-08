@@ -6,14 +6,14 @@ import java.util.List;
 
 
 public class DisplayTray {
-    private String id; // 展示托盘标识符
+    private String trayId; // 展示托盘标识符
     private String materialColor; // 镶嵌材料颜色
     private double width; // 宽度
     private double depth; // 深度
     private Hashtable<String, DisplayTray> trays; // 存放展示托盘
 
-    public DisplayTray(String id, String materialColor, double width, double depth) {
-        this.id = id;
+    public DisplayTray(String trayId, String materialColor, double width, double depth) {
+        this.trayId = trayId;
         this.materialColor = materialColor;
         this.width = width;
         this.depth = depth;
