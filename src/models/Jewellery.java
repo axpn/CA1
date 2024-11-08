@@ -1,11 +1,7 @@
 package models;
 
 
-import java.util.List;
-
-
-import utils.LinkedList;
-import utils.Node;
+import utils.DoublyLinkedList;
 
 
 public class Jewellery {
@@ -15,8 +11,8 @@ public class Jewellery {
     private String targetGender; // 目标性别（男性、女性等）
     private String image; // 图像 URL
     private double price; // 零售价
-    private LinkedList<Jewellery> jewellery; // 存放珠宝物品，改为链表
-    private Jewellery data;
+    private DoublyLinkedList<Jewellery> jewellery; // 存放珠宝物品，改为链表
+
 
     public Jewellery(String description, String type, String targetGender, String image, double price) {
         this.description = description;
@@ -24,7 +20,7 @@ public class Jewellery {
         this.targetGender = targetGender;
         this.image = image;
         this.price = price;
-        this.jewellery = new LinkedList<>();  // 使用 utils.LinkedList 存储珠宝物品
+        this.jewellery = new DoublyLinkedList<>();  // 使用 utils.LinkedList 存储珠宝物品
     }
 
     // 添加珠宝物品
@@ -40,6 +36,7 @@ public class Jewellery {
 
     //展示所有珠宝
     public void showJewellery() {
+
     }
 
 

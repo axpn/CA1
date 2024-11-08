@@ -1,6 +1,6 @@
 package utils;
-import java.util.*;
-public class LinkedList<E> {
+
+public class DoublyLinkedList<E> {
 
 
 
@@ -10,7 +10,7 @@ public class LinkedList<E> {
      int size;
 
     // Constructor
-    public  LinkedList() {
+    public DoublyLinkedList() {
         this.head = null;
         this.tail = null;
         this.size = 0;
@@ -29,7 +29,7 @@ public class LinkedList<E> {
         size++;
     }
 
-    public void addLinkedList(LinkedList<E> list) {
+    public void addLinkedList(DoublyLinkedList<E> list) {
         if (list.head == null) {
             return;
         }
@@ -64,9 +64,10 @@ public class LinkedList<E> {
         else {
             current.prev.next = current.next;
         }
+        size--;
     }
 
-    public void removeLinkedList(LinkedList<E> list) {
+    public void removeLinkedList(DoublyLinkedList<E> list) {
         if (list == null) {
             return;
         }
