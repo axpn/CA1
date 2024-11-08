@@ -1,7 +1,12 @@
 package models;
+<<<<<<< Updated upstream
 
 
 import utils.DoublyLinkedList;
+=======
+import utils.LinkedList;
+import utils.Node;
+>>>>>>> Stashed changes
 
 
 public class Jewellery {
@@ -26,17 +31,21 @@ public class Jewellery {
     // 添加珠宝物品
     public void addJewellery(Jewellery jewellery) {
 
-        this.jewellery.addNode(jewellery);  // 使用addLinkedList方法
+        this.jewellery.addLinkedList(jewellery.jewellery);  // 使用addLinkedList方法
     }
 
     //删除珠宝
     public void deleteJewellery(Jewellery jewellery) {
-        this.jewellery.removeNode(jewellery);
+        this.jewellery.removeLinkedList(jewellery.jewellery);
     }
 
     //展示所有珠宝
     public void showJewellery() {
+<<<<<<< Updated upstream
 
+=======
+        this.jewellery.loop();
+>>>>>>> Stashed changes
     }
 
 

@@ -1,7 +1,6 @@
 package models;
-
-import java.util.LinkedList;
-
+import utils.LinkedList;
+import utils.Node;
 public class Containment {
     private String type; // 材料类型（例如金、白金、钻石、祖母绿、银等）
     private String description; // 描述（例如宝石的切割/形状/颜色的自由文本）
@@ -29,20 +28,17 @@ public class Containment {
 
     // 添加材料/组件
     public void addContainment(Containment containment) {
-
-        containments.add(containment);
+        this.containments.addNode(containment);
     }
 
     //删除材料/组件
     public void deleteContainment(Containment containment) {
-        containments.delete(containment);
+        this.containments.removeNode(containment);
     }
 
     //展示珠宝信息
     public void showContainment() {
-        for (Containment c : containments) {
-            System.out.println(c);
-        }
+        this.containments.loop();
     }
 
 //    获取所有材料/组件

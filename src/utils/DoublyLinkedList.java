@@ -1,6 +1,10 @@
 package utils;
 
+<<<<<<< Updated upstream:src/utils/DoublyLinkedList.java
 public class DoublyLinkedList<E> {
+=======
+public class LinkedList<E> {
+>>>>>>> Stashed changes:src/utils/LinkedList.java
 
 
 
@@ -15,6 +19,7 @@ public class DoublyLinkedList<E> {
         this.tail = null;
         this.size = 0;
     }
+
 
     public  void addNode(E data) {
         Node<E> newNode = new Node<>(data);
