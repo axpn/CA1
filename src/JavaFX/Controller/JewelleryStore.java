@@ -1,4 +1,4 @@
-package Controller;
+package JavaFX.Controller;
 
 import models.DisplayCase;
 import models.DisplayTray;
