@@ -1,6 +1,6 @@
 package utils;
 import java.util.*;
-public class LinkedList<E> implements Iterable<E>{
+public class LinkedList<E> {
 
 
 
@@ -85,24 +85,5 @@ public class LinkedList<E> implements Iterable<E>{
 
 
 
-    @Override
-    public Iterator<E> iterator() {
-        return new LinkedListIterator();
-    }
-
-    private class LinkedListIterator implements Iterator<E> {
-        private Node<E> current = head;
-
-        @Override
-        public boolean hasNext() {// Implementation here
-            return current != null;
-        }
-
-        @Override
-        public E next() {// Implementation here
-            E data = current.data;
-            current = current.next;
-            return data;
-        }
-    }
+    
 }
