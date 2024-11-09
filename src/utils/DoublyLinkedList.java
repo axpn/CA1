@@ -1,17 +1,22 @@
 package utils;
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:src/utils/DoublyLinkedList.java
 public class DoublyLinkedList<E> {
 =======
 public class LinkedList<E> {
 >>>>>>> Stashed changes:src/utils/LinkedList.java
+=======
+import java.util.Iterator;
+>>>>>>> Stashed changes
 
+public class DoublyLinkedList<E> implements Iterable<E> {
 
 
     // Fields for head, tail, and size
-     Node<E> head;
-     Node<E> tail;
-     int size;
+    Node<E> head;
+    Node<E> tail;
+    int size;
 
     // Constructor
     public DoublyLinkedList() {
@@ -20,8 +25,12 @@ public class LinkedList<E> {
         this.size = 0;
     }
 
+<<<<<<< Updated upstream
 
     public  void addNode(E data) {
+=======
+    public void addNode(E data) {
+>>>>>>> Stashed changes
         Node<E> newNode = new Node<>(data);
         if (tail == null) {
             head = newNode;
@@ -48,7 +57,7 @@ public class LinkedList<E> {
         }
     }
 
-    public  Node<E> findNode(E data) {
+    public Node<E> findNode(E data) {
         Node<E> current = head;
         while (current != null) {
             if (current.data == data) {
@@ -63,10 +72,10 @@ public class LinkedList<E> {
         Node<E> current = findNode(data);
         if (current == null) {
             return;
-        } if (current.prev == null) {
-            head = current.next;
         }
-        else {
+        if (current.prev == null) {
+            head = current.next;
+        } else {
             current.prev.next = current.next;
         }
         size--;
@@ -77,7 +86,7 @@ public class LinkedList<E> {
             return;
         }
         if (list.head.prev == null) {
-            head=list.tail.next ;
+            head = list.tail.next;
         } else {
             list.head.prev.next = list.tail.next;
         }
@@ -89,7 +98,44 @@ public class LinkedList<E> {
         }
     }
 
+    //返回新链表中所有节点的 data 值
+    public DoublyLinkedList<E> values() {
+        DoublyLinkedList<E> values = new DoublyLinkedList<>();
+        Node<E> current = head;
+        while (current != null) {
+            values.addNode(current.data);  // Add each node's data to the list
+            current = current.next;    // Move to the next node
+        }
+        return values;
+    }
+
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    @Override
+    public Iterator<E> iterator() {
+        return new DoublyLinkedListIterator();
+    }
+
+    private class DoublyLinkedListIterator implements Iterator<E> {
+        private Node<E> current = head;
+
+        @Override
+        public boolean hasNext() {
+            return current != null;
+        }
+
+        @Override
+        public E next() {
+            if (!hasNext()) {
+                throw new java.util.NoSuchElementException();
+            }
+            E data = current.data;
+            current = current.next;
+            return data;
+        }
+    }
 
 
-    
 }

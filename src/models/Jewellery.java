@@ -8,6 +8,8 @@ import utils.LinkedList;
 import utils.Node;
 >>>>>>> Stashed changes
 
+import java.util.LinkedList;
+
 
 public class Jewellery {
 
