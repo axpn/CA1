@@ -1,14 +1,9 @@
 package utils;
-
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream:src/utils/DoublyLinkedList.java
 public class DoublyLinkedList<E> {
-=======
 public class LinkedList<E> {
->>>>>>> Stashed changes:src/utils/LinkedList.java
-=======
+
 import java.util.Iterator;
->>>>>>> Stashed changes
+
 
 public class DoublyLinkedList<E> implements Iterable<E> {
 
@@ -25,12 +20,10 @@ public class DoublyLinkedList<E> implements Iterable<E> {
         this.size = 0;
     }
 
-<<<<<<< Updated upstream
 
     public  void addNode(E data) {
-=======
+
     public void addNode(E data) {
->>>>>>> Stashed changes
         Node<E> newNode = new Node<>(data);
         if (tail == null) {
             head = newNode;

@@ -72,4 +72,14 @@ public class HashSC<E> {
         return null;  // Return null if no list contains the data
     }
 
+    public DoublyLinkedList.LinkedList.DoublyLinkedList<E> values() {
+        DoublyLinkedList.LinkedList.DoublyLinkedList<E> values = new DoublyLinkedList.LinkedList.DoublyLinkedList<>();
+        Node<E> current = head;
+        while (current != null) {
+            values.addNode(current.data);  // Add each node's data to the list
+            current = current.next;    // Move to the next node
+        }
+        return values;
+    }
+
 }
